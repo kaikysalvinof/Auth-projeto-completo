@@ -65,9 +65,19 @@ graph TD
     class API core;
 
 
-Aqui está o código completo do `README.md`, exatamente como você pediu: dentro de um único bloco de código para copiar e colar, **sem nenhum emoji genérico no texto**, com a sua autoria isolada em destaque, o desenho da arquitetura e as *badges* (ícones) completas de todas as tecnologias (Front, Back e DB).
 
-Basta clicar em "Copiar código" no canto superior direito do bloco abaixo e colar no seu arquivo:
+
+
+
+
+
+
+
+```mermaid
+
+    Peço desculpas pela confusão. O formato de apresentação no chat às vezes quebra blocos de código muito grandes se houver diagramas Mermaid misturados com HTML longo no meio.
+
+Para garantir que você copie tudo de uma vez sem nenhum erro de formatação, aqui está o código Markdown **100% contínuo, limpo e em um único bloco exato**, pronto para colar no seu GitHub:
 
 ```markdown
 <div align="center">
@@ -158,26 +168,29 @@ A infraestrutura foi consolidada com tecnologias corporativas para suportar conc
 
 **Front-End (Web SaaS & Admin):**
 
-<p align="left">
+
+
+
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
 <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
 <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
-</p>
 
 **Back-End (Core API & SDKs):**
 
-<p align="left">
+
+
+
 <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
 <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Express.js" />
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-</p>
 
 **Database (Persistência e Segurança):**
 
-<p align="left">
+
+
+
 <img src="https://www.google.com/search?q=https://img.shields.io/badge/MongoDB_Atlas-4EA94B%3Fstyle%3Dfor-the-badge%26logo%3Dmongodb%26logoColor%3Dwhite" alt="MongoDB Atlas" />
-</p>
 
 ---
 
@@ -193,9 +206,7 @@ Abaixo encontra-se a galeria detalhada das interfaces desenvolvidas, cobrindo o 
 
 
 
-<a href="https://postimg.cc/YGvD1HC5" target="_blank">
-<img src="https://i.postimg.cc/fLC4QWnR/imagem-2026-03-01-161904068.png" alt="Apresentação Comercial SecAuth" width="100%">
-</a>
+<a href="https://postimg.cc/YGvD1HC5" target="_blank"><img src="https://i.postimg.cc/fLC4QWnR/imagem-2026-03-01-161904068.png" alt="Apresentação Comercial SecAuth" width="100%"></a>
 </td>
 <td width="50%">
 <b>Apresentação B2B (Recursos e Defesa)</b>
@@ -203,9 +214,7 @@ Abaixo encontra-se a galeria detalhada das interfaces desenvolvidas, cobrindo o 
 
 
 
-<a href="https://postimg.cc/nXK9FRqZ" target="_blank">
-<img src="https://i.postimg.cc/52TBmD0H/imagem-2026-03-01-174712923.png" alt="Recursos e Proteção" width="100%">
-</a>
+<a href="https://postimg.cc/nXK9FRqZ" target="_blank"><img src="https://i.postimg.cc/52TBmD0H/imagem-2026-03-01-174712923.png" alt="Recursos e Proteção" width="100%"></a>
 </td>
 </tr>
 <tr>
@@ -215,9 +224,7 @@ Abaixo encontra-se a galeria detalhada das interfaces desenvolvidas, cobrindo o 
 
 
 
-<a href="https://postimg.cc/tnPCrJ5Z" target="_blank">
-<img src="https://i.postimg.cc/5yKY2FQ3/imagem-2026-03-01-174938118.png" alt="Painel de Controle do Cliente" width="100%">
-</a>
+<a href="https://postimg.cc/tnPCrJ5Z" target="_blank"><img src="https://i.postimg.cc/5yKY2FQ3/imagem-2026-03-01-174938118.png" alt="Painel de Controle do Cliente" width="100%"></a>
 </td>
 <td width="50%">
 <b>Configurações da Aplicação (AppID e Secret)</b>
@@ -225,9 +232,7 @@ Abaixo encontra-se a galeria detalhada das interfaces desenvolvidas, cobrindo o 
 
 
 
-<a href="https://postimg.cc/2LFNbZGL" target="_blank">
-<img src="https://i.postimg.cc/4yjf0vhP/imagem-2026-03-01-175216950.png" alt="Configurações de Credenciais" width="100%">
-</a>
+<a href="https://postimg.cc/2LFNbZGL" target="_blank"><img src="https://i.postimg.cc/4yjf0vhP/imagem-2026-03-01-175216950.png" alt="Configurações de Credenciais" width="100%"></a>
 </td>
 </tr>
 <tr>
@@ -237,9 +242,7 @@ Abaixo encontra-se a galeria detalhada das interfaces desenvolvidas, cobrindo o 
 
 
 
-<a href="https://postimg.cc/NKVGwRzt" target="_blank">
-<img src="https://i.postimg.cc/q7BNyLcN/imagem-2026-03-01-175403656.png" alt="Gestão Interna de Licenças" width="100%">
-</a>
+<a href="https://postimg.cc/NKVGwRzt" target="_blank"><img src="https://i.postimg.cc/q7BNyLcN/imagem-2026-03-01-175403656.png" alt="Gestão Interna de Licenças" width="100%"></a>
 </td>
 <td width="50%">
 <b>Integração Direta e Monitoramento (API)</b>
@@ -247,9 +250,7 @@ Abaixo encontra-se a galeria detalhada das interfaces desenvolvidas, cobrindo o 
 
 
 
-<a href="https://postimg.cc/sGVsJmv7" target="_blank">
-<img src="https://i.postimg.cc/vTnTbSyq/imagem-2026-03-01-175444791.png" alt="Monitoramento e API" width="100%">
-</a>
+<a href="https://postimg.cc/sGVsJmv7" target="_blank"><img src="https://i.postimg.cc/vTnTbSyq/imagem-2026-03-01-175444791.png" alt="Monitoramento e API" width="100%"></a>
 </td>
 </tr>
 <tr>
@@ -259,9 +260,7 @@ Abaixo encontra-se a galeria detalhada das interfaces desenvolvidas, cobrindo o 
 
 
 
-<a href="https://postimg.cc/Vrn3pC3F" target="_blank">
-<img src="https://i.postimg.cc/QtyhBgmv/imagem-2026-03-01-175307736.png" alt="Planos e Assinaturas" width="50%">
-</a>
+<a href="https://postimg.cc/Vrn3pC3F" target="_blank"><img src="https://i.postimg.cc/QtyhBgmv/imagem-2026-03-01-175307736.png" alt="Planos e Assinaturas" width="50%"></a>
 </td>
 </tr>
 </table>
