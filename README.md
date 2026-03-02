@@ -7,53 +7,59 @@
 [![Security: AES-256-GCM](https://img.shields.io/badge/Encryption-AES--256--GCM-blue?style=flat-square)](#)
 [![Security: HMAC-SHA256](https://img.shields.io/badge/Signatures-HMAC--SHA256-blue?style=flat-square)](#)
 
-🔗 **Acesso ao Ambiente MVP:** [authjtkeeste1991ka.squareweb.app](https://authjtkeeste1991ka.squareweb.app)
+*Plataforma B2B que fornece um ecossistema completo de criptografia, licenciamento e autenticação para softwares operando sob alto risco de engenharia reversa e pirataria.*
+
+**Acesso ao Ambiente MVP:** [authjtkeeste1991ka.squareweb.app](https://authjtkeeste1991ka.squareweb.app)
 
 </div>
 
 ---
 
-## 👨‍💻 Arquitetura e Engenharia (Desenvolvimento Solo)
+## Engenharia e Arquitetura (Desenvolvimento Solo)
 
-**A arquitetura de proteção de todo o sistema foi desenhada 100% por mim**, estruturada rigorosamente para atender às exigências de segurança de alto nível do cliente. Atuei de forma solo em todas as frentes do projeto:
+A arquitetura de proteção de todo o ecossistema foi desenhada e executada 100% por mim, estruturada rigorosamente para atender às exigências de segurança de alto nível do cliente. A condução do projeto abrangeu a engenharia unificada de ponta a ponta:
 
-* **Full-Stack & UX:** Criação do SaaS, Painel do Cliente, Painel Admin e SDKs.
-* **Cyber Security:** Blindagem contra engenharia reversa, *Replay Attacks*, *Man-in-the-Middle* e testes de intrusão.
-* **DevOps:** Deploy isolado, orquestração de rotas e banco de dados particionado.
-
----
-
-## 💻 Stack Tecnológica
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Express.js" />
-  <img src="https://img.shields.io/badge/MongoDB_Atlas-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB Atlas" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-</p>
+* **Software Engineering (Full-Stack):** Desenvolvimento integral da API RESTful, construção das interfaces web (SaaS e Admin) e integração de módulos SDK (C++, Python, Node.js) para comunicação segura com os softwares finais.
+* **Cyber Security & Pentesting:** Modelagem de ameaças e blindagem ativa. Execução de testes de intrusão, proteção contra ataques Man-in-the-Middle (MitM), higienização de injeções de banco de dados e mitigação de Brute-force.
+* **DevOps & Infraestrutura:** Orquestração de rotas, deploy de alta disponibilidade e configuração otimizada de banco de dados em nuvem sob regras de particionamento e Whitelisting.
 
 ---
 
-## 🔒 Mecanismos de Proteção e Isolamento
+## Topologia de Rede e Particionamento Isolado
 
-Em vez de longos textos, eis a infraestrutura tática implementada:
+Para garantir a máxima integridade e anular riscos de comprometimento cruzado, o sistema utiliza um método de particionamento estrito. Os módulos operam em ambientes fisicamente isolados, comunicando-se unicamente através de conexões encriptadas:
 
-* **AES-256-GCM:** *Payloads* HTTP 100% encriptados de ponta-a-ponta.
-* **HMAC-SHA256:** Assinaturas digitais nos pacotes do SDK (Zero chaves expostas na rede).
-* **HWID Lock:** Licenças vinculadas ao hardware físico (MAC, CPU) do usuário final.
-* **Anti-Replay Attack:** Bloqueio temporal com uso de *Nonces* únicos (tolerância em milissegundos).
-* **Isolamento de Redes:** Back-End, Front-End (Cliente) e Admin particionados fisicamente.
+1. **Core API (Back-End):** Motor de validação criptográfica, responsável por transações de base de dados, segurança de requisições e processamento financeiro.
+2. **Dashboard SaaS (Front-End):** Plataforma web voltada para clientes corporativos efetuarem a gestão de aplicações, licenças e métricas de uso.
+3. **Painel Admin:** Ambiente restrito e invisível à rede pública, focado na auditoria global, logs de tráfego e acionamento de bloqueios emergenciais.
+4. **Client SDKs:** Módulos enxutos integrados no software de terceiros, operando com latência otimizada para validação de licenças e biometria de hardware.
 
 ```mermaid
 graph TD
-    SDK[SDKs / Client Apps] == "Assinatura HMAC + HWID" ==> API((Core API RESTful))
-    FRONT[Dashboard do Cliente] <== "AES-256-GCM (Payload Sec)" ==> API
-    API <== "Private Peering" ==> DB[(MongoDB Atlas)]
-    ADMIN[Painel Admin Restrito] <== "Auditoria Segura" ==> API
+    subgraph Client Environment
+        SDK[Client SDKs / Softwares Terceiros]
+    end
+
+    subgraph Public Network
+        FRONT[Dashboard SaaS<br/>authjtkeeste1991ka.squareweb.app]
+    end
+
+    subgraph Secure Internal Network
+        API((API RESTful<br/>Endpoint Core))
+        DB[(MongoDB Atlas<br/>Encrypted Storage)]
+        ADMIN[Painel Admin<br/>Acesso Restrito]
+    end
+
+    %% Flow Connections
+    SDK == "Assinatura HMAC-SHA256 + HWID" ==> API
+    FRONT <== "AES-256-GCM (Payload Criptografado)" ==> API
+    API <== "Private Peering" ==> DB
+    ADMIN <== "Acesso Auditado" ==> API
+
+    classDef public fill:#f8fafc,stroke:#cbd5e1,stroke-width:1px,color:#334155;
+    classDef secure fill:#f1f5f9,stroke:#94a3b8,stroke-width:1px,color:#0f172a;
+    classDef core fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
     
-    classDef secure fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
-    class API secure;
+    class FRONT,SDK public;
+    class ADMIN,DB secure;
+    class API core;
